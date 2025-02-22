@@ -1,0 +1,100 @@
+.banner {
+  margin: 12rem 0rem 0rem;
+  min-height: 60rem;
+  padding: 15rem 10rem;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-black-1, 0.855),
+      rgba($color-black-1, 0.855)
+    ),
+    url('../img/banner-bg-img.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  @include tablet {
+    margin: 7rem 0rem 0rem;
+    min-height: 45rem;
+    padding: 8rem 3.2rem;
+  }
+}
+
+.banner-2 {
+  min-height: 60rem;
+  padding: 15rem 10rem;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-black-1, 0.855),
+      rgba($color-black-1, 0.855)
+    ),
+    url('../img/banner-bg-img.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  @include tablet {
+    min-height: 45rem;
+    padding: 8rem 3.2rem;
+  }
+
+  &__box {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+  }
+
+  &__heading {
+    display: inline-block;
+    font-size: 6.5rem;
+    color: $color-white;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 2rem;
+    animation: moveInLeft 1s ease-out;
+
+    @include smallTablet {
+      font-size: 5.2rem;
+    }
+  }
+
+  &__navigation-tree {
+    color: $color-white;
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    animation: moveInBottom 1s ease-out;
+    animation-delay: 0.75s;
+    animation-fill-mode: backwards;
+  }
+
+  &__navigation-item {
+    display: inline-block;
+  }
+
+  &__navigation-item:first-child::after {
+    content: '\203A';
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: inherit;
+    line-height: 1;
+    margin: 0rem 0.5rem;
+    align-self: center;
+  }
+
+  &__navigation-link {
+    &:link,
+    &:visited {
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &--active:link,
+    &--active:visited {
+      color: $color-primary;
+    }
+  }
+}

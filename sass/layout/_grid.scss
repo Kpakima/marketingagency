@@ -1,0 +1,20 @@
+@mixin grid-col-2($gap) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $gap;
+
+}
+
+@mixin grid-col-3($gap) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $gap
+
+}
+
+@mixin grid-col-4($gap) {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $gap;
+
+}

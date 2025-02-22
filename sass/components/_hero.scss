@@ -1,0 +1,31 @@
+.hero {
+  background-color: rgba($color-black-1, .6);
+  min-height: 50dvh;
+  position: relative;
+  padding: 9.6rem 0rem;
+  position: relative;
+  @include centerFlexItem;
+
+  @include tablet {
+    padding: 7rem 0rem;
+  }
+
+  &__container {
+    width: 50%;
+    text-align: center;
+
+    @include largeScreen {
+        width: 60%;
+    }
+
+    @include smallTablet {
+      width: 80%;
+    }
+
+    @include mobile {
+      width: 100%;
+      padding: 0rem 3.2rem;
+    }
+  }
+
+}

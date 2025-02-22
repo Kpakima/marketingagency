@@ -1,0 +1,152 @@
+.faq {
+  margin-top: -25rem;
+
+  @include mobile {
+    margin-top: -20rem;
+  }
+
+  &__container {
+    @include grid-col-2($column-gap-large);
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0rem 3.2rem;
+
+    @include smallTablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    background-color: $color-white;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  &__heading-box {
+    background-color: $color-primary;
+    padding: 3rem;
+  }
+
+  &__question-answer-wrapper {
+    padding: 2.4rem;
+    background-color: $color-white;
+  }
+
+  &__question-answer {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-bottom: 1px solid $color-secondary;
+    padding: 1.6rem 0rem;
+  }
+
+  &__question-answer:nth-child(1) {
+    border-top: 1px solid $color-secondary;
+  }
+
+  &__question {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-left: auto;
+    transition: all 0.3s;
+  }
+
+  &__answer {
+    font-size: 1.6rem;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+
+  &__form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    background-color: $color-white;
+    border-radius: 3px;
+    overflow: hidden;
+
+    @include smallTablet {
+      grid-row-start: 1;
+    }
+  }
+
+  &__form {
+    padding: 2.4rem;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 1.6rem 2.4rem;
+    font-size: 1.6rem;
+    font-family: inherit;
+    margin-bottom: 0.5rem;
+    border: 1px solid $color-secondary;
+    border-radius: 3px;
+
+    &::placeholder {
+      color: $color-grey-dark;
+    }
+
+    &:focus {
+      box-shadow: 0 2rem 4rem rgba($color-black-1, 0.2);
+      outline: none;
+    }
+
+    &:focus:invalid {
+      outline: 1px solid orangered;
+      border: 1px solid transparent;
+    }
+  }
+
+  &__message {
+    min-height: 14rem;
+  }
+
+  &__label {
+    font-family: inherit;
+    display: block;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s;
+    transform: translate(1rem, 0rem);
+  }
+
+  &__input:placeholder-shown + &__label {
+    transform: translate(1rem, -5rem);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.show-answer.faq__answer {
+  height: 10rem;
+  overflow: none;
+  visibility: visible;
+  opacity: 1;
+  margin-top: 1.5rem;
+}
+
+.rotate-faq-icon.faq__icon {
+  transform: rotate(90deg);
+}
+
+.add-margin-to-question.faq__question {
+  margin-bottom: 2rem;
+}

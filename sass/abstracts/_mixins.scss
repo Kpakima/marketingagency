@@ -1,0 +1,53 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin sectionCenter {
+  max-width: $section-width;
+  margin: 0rem auto;
+  padding: 0rem 3.2rem;
+}
+
+
+/////////////////////////////////////
+/// MEDIA QUERIES
+//////////////////////////////////
+
+@mixin largeScreen {
+@media only screen and (max-width:84em) {
+  @content;
+}
+}
+
+@mixin laptop {
+  @media only screen and (max-width: 73.4em) {
+    @content;
+  }
+ }
+
+ @mixin smallScreen {
+  @media only screen and (max-width: 64em) {
+    @content;
+  }
+ }
+
+
+ @mixin tablet {
+  @media only screen and (max-width: 56.25rem) {
+    @content;
+  }
+ }
+
+ @mixin smallTablet {
+  @media only screen and (max-width: 48rem) {
+    @content;
+  }
+ }
+
+ @mixin mobile {
+  @media only screen and (max-width: 31.25em) {
+    @content;
+  }
+ }

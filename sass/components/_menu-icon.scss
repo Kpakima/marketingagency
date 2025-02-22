@@ -1,0 +1,21 @@
+.menu-icon {
+  font-size: 3rem;
+  line-height: 1;
+  display: none;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $color-primary;
+    cursor: pointer;
+  }
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.close-menu-icon {
+  position: absolute;
+  right: 4.8rem;
+  top: 4.8rem;
+}

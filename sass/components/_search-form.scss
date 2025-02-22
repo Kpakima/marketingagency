@@ -1,0 +1,87 @@
+.bg-overlay {
+  height: 100dvh;
+  width: 100%;
+  background-color: rgba($color-black-1, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.search {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0.25);
+  -moz-transform: translate(-50%, -50%) scale(0.25);
+  -ms-transform: translate(-50%, -50%) scale(0.25);
+  -o-transform: translate(-50%, -50%) scale(0.25);
+  transform: translate(-50%, -50%) scale(0.25);
+  z-index: 3000;
+  width: 50%;
+  background-color: $color-white;
+  padding: 2.4rem 4rem;
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  transition: all 0.5s 0.2s;
+
+  visibility: hidden;
+  opacity: 0;
+
+  @include tablet {
+    width: 90%;
+    padding: 1.2rem 2.4rem;
+  }
+
+  .search__input {
+    width: 100%;
+    padding: 1.6rem 4rem;
+    font-size: 1.8rem;
+    border: none;
+    background-color: $color-grey-light;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+
+    &:focus {
+      outline: 1px solid $color-secondary;
+    }
+  }
+
+  button {
+    border: none;
+    background: none;
+    font-size: 3.6rem;
+    line-height: 1;
+    color: $color-grey-dark;
+    transition: all 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-black-2;
+    }
+  }
+}
+
+.popup.bg-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup.search {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}

@@ -1,0 +1,487 @@
+// The about section style
+.about {
+  padding: 12rem 0rem;
+
+  @include tablet {
+    padding: 7rem 0rem;
+  }
+
+  &__container {
+    @include sectionCenter;
+    @include grid-col-2($column-gap-large);
+
+    @include smallScreen {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  &__img-box {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: center;
+
+    @include smallTablet {
+      gap: 2rem;
+    }
+  }
+
+  &__img-wrapper:first-child {
+    grid-row: span 2;
+  }
+
+  &__img-wrapper:nth-child(2) {
+    align-self: self-end;
+  }
+
+  &__megaphone {
+    align-self: self-start;
+  }
+
+  &__megaphone {
+    padding: 2.4rem;
+    background-color: $color-primary;
+    color: $color-white;
+    font-size: 3rem;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  &__megaphone-paragraph {
+    line-height: 1.2;
+  }
+
+  &__megaphone-icon {
+    display: inline-block;
+    margin-bottom: 1.6rem;
+    line-height: 1;
+    font-size: 4rem;
+  }
+
+  &__paragraph {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1.6rem;
+  }
+
+  &__vision-mission-box {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 2.4rem;
+
+    @include mobile {
+      gap: 1.2rem;
+    }
+  }
+
+  &__vision-mission-title {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+  }
+
+  &__vision-mission-paragraph {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1.6rem;
+  }
+
+  &__marketing {
+    width: 100%;
+    background-color: $color-grey-light;
+    position: relative;
+    padding: 0.5rem;
+    margin-bottom: 2.4rem;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    border-radius: 100px;
+
+    &::after {
+      content: '';
+      width: 88%;
+      height: 100%;
+      background-color: $color-primary;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      border-radius: 10px;
+    }
+  }
+
+  &__marketing-text {
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    position: absolute;
+    left: 1rem;
+    top: -2.5rem;
+  }
+
+  &__marketing-percentage {
+    font-size: 1.4rem;
+    font-weight: 600;
+    position: absolute;
+    top: -2.5rem;
+    left: 88%;
+  }
+
+  &__foundation-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 3.2rem;
+      align-items: flex-start;
+    }
+  }
+
+  &__founder-img-box {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  &__founder-img {
+    width: 7rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+  }
+
+  &__founder-text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__founder-name {
+    font-size: 1.6rem;
+    font-family: cursive, 'Robotto', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  &__founder-text {
+    color: $color-grey-dark;
+    font-size: 1.4rem;
+  }
+}
+
+// The feature logo section styles
+
+.feature-logo {
+  padding: 12rem 0rem;
+
+  @include tablet {
+    padding: 7rem 0rem;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include sectionCenter;
+
+    @include mobile {
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+  }
+
+  &__logo {
+    height: 3.2rem;
+    @include smallScreen {
+      height: 2.8rem;
+    }
+
+    @include tablet {
+      height: 2.4rem;
+    }
+
+    @include smallTablet {
+      height: 1.6rem;
+    }
+
+    @include mobile {
+    }
+  }
+}
+
+// The services section styles
+.services {
+  padding: 12rem 0rem;
+
+  @include tablet {
+    padding: 7rem 0rem;
+  }
+
+  &__container {
+    @include sectionCenter;
+    @include grid-col-2($column-gap-medium);
+
+    @include smallTablet {
+      gap: $column-gap-small;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    display: block;
+  }
+
+  &__img-box {
+    max-width: 50%;
+    position: absolute;
+    overflow: hidden;
+
+    @include smallScreen {
+      position: relative;
+      max-width: 100%;
+    }
+  }
+
+  &__service {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    min-height: 35rem;
+    padding: 4.8rem;
+    box-shadow: 0 2rem 6rem rgba($color-black-1, 0.2);
+    position: relative;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: all 0.5s;
+
+    &::after {
+      content: '';
+      width: 5rem;
+      height: 5rem;
+      background-image: radial-gradient($color-secondary, $color-primary);
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      transition: all 0.75s;
+      border-radius: 50%;
+    }
+
+    &:hover {
+      &::after {
+        -webkit-transform: scale(35);
+        -moz-transform: scale(35);
+        -ms-transform: scale(35);
+        -o-transform: scale(35);
+        transform: scale(35);
+        opacity: 1;
+      }
+    }
+
+    &:hover .services__text-box {
+      color: $color-white;
+    }
+
+    @include smallScreen {
+      flex-direction: column;
+      padding: 2.4rem;
+      gap: 3.2rem;
+    }
+  }
+
+  &__service-1::after {
+    right: 0;
+    bottom: 0;
+  }
+
+  &__service-2 {
+    flex-direction: row-reverse;
+    &::after {
+      left: 0;
+      bottom: 0;
+    }
+
+    @include smallScreen {
+      flex-direction: column;
+    }
+  }
+
+  &__service-3 {
+    &::after {
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__service-4 {
+    flex-direction: row-reverse;
+    &::after {
+      top: 0;
+      left: 0;
+    }
+
+    @include smallScreen {
+      flex-direction: column;
+    }
+  }
+
+  &__img-box-1 {
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 400px;
+
+    @include smallScreen {
+      border-radius: 0;
+    }
+  }
+
+  &__img-box-2 {
+    left: 0;
+    bottom: 0;
+    border-top-right-radius: 400px;
+    @include smallScreen {
+      border-radius: 0;
+    }
+  }
+
+  &__img-box-3 {
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 400px;
+    @include smallScreen {
+      border-radius: 0;
+    }
+  }
+
+  &__img-box-4 {
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 400px;
+    @include smallScreen {
+      border-radius: 0;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1.6rem;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+  }
+
+  &__text-box {
+    max-width: 50%;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+
+    @include smallScreen {
+      max-width: 100%;
+    }
+  }
+
+  &__paragraph {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
+////////////////////////////////////////////////
+// This is the portfolio section styles
+///////////////////////////////////////////////
+
+.portfolios {
+  margin-top: -20rem;
+
+  &__container {
+    @include grid-col-3($column-gap-medium);
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+
+    @include smallTablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+
+  &__portfolio {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__img {
+    max-width: 100%;
+    border-radius: 3px;
+    transition: all 0.3s;
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    color: $color-white;
+    background-color: rgba($color-primary, 0.9);
+    padding: 1.6rem;
+    border-radius: 3px;
+
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  &__title {
+    display: inline-block;
+    font-size: 2rem;
+  }
+
+  &__text {
+    display: inline-block;
+    font-size: 1.6rem;
+  }
+
+  &__portfolio:hover &__img {
+    transform: scale(1.1);
+    filter: grayscale(1);
+  }
+}
